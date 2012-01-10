@@ -53,7 +53,7 @@ class Compressor(object):
         js = self.concatenate(paths)
         if templates:
             js = js + self.compile_templates(templates)
-        js = "(function() { %s }).call(this);" % js
+#        js = "(function() { %s }).call(this);" % js
 
         compressor = self.js_compressor
         if compressor:
