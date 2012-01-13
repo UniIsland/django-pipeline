@@ -44,6 +44,10 @@ class CompressedCSSNode(template.Node):
             context.update({
                 'rel': 'stylesheet/less'
             })
+        else:
+            context.update({
+                'rel': 'stylesheet'
+            })
         return render_to_string(package['template'], context)
 
     def render_individual(self, package):
